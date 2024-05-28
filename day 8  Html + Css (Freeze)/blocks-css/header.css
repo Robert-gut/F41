@@ -39,3 +39,23 @@
 .bg-header nav a:hover{
   color: #c8c10d;
 }
+
+
+.bg-header .logo{
+  font-size: 30px;
+  font-family: RammettoOne;
+  color: #cb3362;
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+}
+
+.bg-header .logo span{
+  color: #c8c10d;
+}
+
+.bg-header .logo img{
+  position: absolute;
+  top: -12px;
+  left: 100px;
+}
