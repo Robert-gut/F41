@@ -21,3 +21,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: Quicksand;
+  src: url(../fonts/Quicksand-Bold.woff.woff) format('woff'),
+  url(../fonts/Quicksand-Bold.woff) format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}

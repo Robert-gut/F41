@@ -1,6 +1,8 @@
 @import './fonts.css';
 
 @import '../blocks-css/header.css';
+@import '../blocks-css/banerHome.css';
+
 
 ul,ol,h1,h2,h3,h4,h5,h6,p,body{
   margin: 0;
