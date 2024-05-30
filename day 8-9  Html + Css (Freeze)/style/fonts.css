@@ -29,3 +29,11 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: RobotoR;
+  src: url(../fonts/Roboto-Regular.woff) format('woff'),
+  url(../fonts/Roboto-Regular.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
