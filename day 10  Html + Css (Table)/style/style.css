@@ -1,4 +1,31 @@
 table, th, td{
   border: 2px solid black;
+
+  border-spacing: 10px 10px;
+  /*! відступи між коміркуами */
+
+  border-collapse: collapse;
+  /*! забирає подвоєння бордерів  */
+
+  caption-side: top;
+  /*! позиціювання заголовка таблиці (верх або низ) */
   
+  empty-cells: hide;
+  /*! показувати або ні пусті комірки */
+}
+
+thead{
+  color: red;
+}
+
+tbody{
+  background: blue;
+}
+
+tfoot{
+  height: 50px;
+  text-align: right;
+  /*! по горизонталі */
+  vertical-align: bottom;
+  /*! по вертикалі */
 }
