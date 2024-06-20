@@ -1,0 +1,8 @@
+header{
+  background-color: var(--color_main_2);
+  background-image: url(../../images/Bg1.svg);
+  height: 57px;
+  display: flex;
+  align-items: center;
+}
+
