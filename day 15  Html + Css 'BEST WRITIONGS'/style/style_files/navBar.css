@@ -1,0 +1,32 @@
+nav{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color_main_1);
+  filter: drop-shadow(2px 3.464px 3.5px #95aeb6);
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav ul li a{
+  text-transform: uppercase;
+  padding: 15px 17px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 42px;
+  color: var(--color_btn_text);
+  font-weight: 400;
+  font-family: Roboto-Regular;
+  text-decoration: none;
+}
+
+nav ul li a:hover{
+  background-color: var(--color_btn_send_message_hover);
+  color: var(--color_btn_text_hover)
+}
