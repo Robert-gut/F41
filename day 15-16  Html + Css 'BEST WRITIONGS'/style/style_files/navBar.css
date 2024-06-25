@@ -22,8 +22,14 @@ nav ul li a{
   line-height: 42px;
   color: var(--color_btn_text);
   font-weight: 400;
-  font-family: Roboto-Regular;
+  font-family: Roboto_Regular;
   text-decoration: none;
+}
+
+nav .border_li::after{
+  content: '';
+  border: 2px solid var(--color_btn_send_message_hover);
+  border-radius: 3px;
 }
 
 nav ul li a:hover{
