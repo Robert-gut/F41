@@ -1,0 +1,111 @@
+nav{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color_main_1);
+  filter: drop-shadow(2px 3.464px 3.5px #95aeb6);
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav ul li a{
+  text-transform: uppercase;
+  padding: 13px 17px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 42px;
+  color: var(--color_btn_text);
+  font-weight: 400;
+  font-family: Roboto_Regular;
+  text-decoration: none;
+}
+
+nav .border_li::after{
+  content: '';
+  border: 2px solid var(--color_btn_send_message_hover);
+  border-radius: 3px;
+  position: relative;
+  left: 2px;
+}
+
+nav ul li a:hover{
+  background-color: var(--color_btn_send_message_hover);
+  color: var(--color_btn_text_hover);
+  box-shadow: -6px 0px 0px var(--color_btn_send_message_hover),
+  6px 0px 0px var(--color_btn_send_message_hover);
+}
+
+
+@media screen and (min-width: 1400px){
+  nav .border_li::after{
+    left: 11px;
+  }
+  nav ul li a:hover{
+    box-shadow: -16px 0px 0px var(--color_btn_send_message_hover),
+    16px 0px 0px var(--color_btn_send_message_hover);
+  }
+}
+
+nav a{
+  color: #caddea;
+  text-decoration: none;
+}
+
+nav .login_and_chat{
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .login, .live_chat{
+  font-size: 22px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--color_btn_text);
+  font-weight: 400;
+  font-family: Roboto_Regular;
+}
+
+nav .login{
+  margin-right: 60px;
+}
+
+/* nav .login:hover, header .live_chat:hover{
+  color: var(--color_btn_text_hover)
+} */
+
+nav .login::after{
+  content: '';
+  display: inline-block;
+  background-image: url(../../images/Login.svg);
+  background-repeat: no-repeat;
+  width: 55px;
+  height: 30px;
+  position: relative;
+  top: 5px;
+}
+nav .live_chat::after{
+  content: '';
+  display: inline-block;
+  background-image: url(../../images/Chat.svg);
+  background-repeat: no-repeat;
+  width: 55px;
+  height: 30px;
+  position: relative;
+  top: 5px;
+}
+
+
+/* nav .login:hover::after{
+  background-image: url(../../images/Login2.svg);
+}
+
+nav .live_chat:hover::after{
+  background-image: url(../../images/Chat2.svg);
+} */

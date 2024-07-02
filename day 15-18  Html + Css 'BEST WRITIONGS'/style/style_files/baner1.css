@@ -1,5 +1,6 @@
 .baner{
   background-color: #eaeff5;
+  padding: 0;
 }
 
 
@@ -8,6 +9,18 @@
   block-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px){
+  .baner .bg_img{
+    background-image: none;
+  }
+  .baner{
+    background-image: url(../../images/main_bg_img_heder.png);
+    block-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
 }
 
 .baner a img{
