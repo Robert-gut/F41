@@ -34,7 +34,7 @@ const number3 = 3.14//! константа
 
 //! 1 number
 
-// const age = 20
+const age = 20
 // console.log('✌️age --->', age);
 // console.log('✌️age --->', typeof age);
 
@@ -83,7 +83,7 @@ const number3 = 3.14//! константа
 //! 4 undefined - присвоює сам js коли в нас пуста змінна або константа
 
 
-// let any
+let any
 // console.log('✌️any --->', any);
 // console.log('✌️any --->', typeof any);
 
@@ -96,7 +96,7 @@ const number3 = 3.14//! константа
 
 //! 5 null - що ми знаємо що дана змінна є пуста
 
-// let port = null
+let port = null
 // console.log('✌️port --->', port);
 // console.log('✌️port --->',typeof port);
 
