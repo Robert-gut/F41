@@ -166,43 +166,64 @@
 // console.log(Math.floor(Math.random() * 100) + 1);
 
 
-const namberGame = () => {
-  const randomNumver = Math.floor(Math.random() * 100) + 1
+// const namberGame = () => {
+//   const randomNumver = Math.floor(Math.random() * 100) + 1
 
-  let guess
-  let attempts = 0
+//   let guess
+//   let attempts = 0
 
-  while(true){
-    guess = +prompt('Guess the number between 1 and 100:')
+//   while(true){
+//     guess = +prompt('Guess the number between 1 and 100:')
 
-    if (isNaN(guess)) {
-      alert('Please enter a valid number.')
-      continue
+//     if (isNaN(guess)) {
+//       alert('Please enter a valid number.')
+//       continue
+//     }
+
+//     attempts++
+
+//     if(guess === randomNumver){
+//       alert(`Congratulations! You Guessed the numver ${randomNumver} correctly in ${attempts} attempts.`)
+//       break
+//     } else if (guess > randomNumver){
+//       alert('Too high! Try again.')
+//     } else {
+//       alert('Too low! Try again.')
+//     }
+//   }
+// }
+
+// namberGame()
+
+
+
+// const sum = (n) => {
+//   let sum = 0
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 2 === 0) sum += i
+//   }
+//   return sum
+// }
+
+// sum(50)
+
+
+///////////////////////////////////////// dz /////////////////////////////////
+
+const count = (A, B) => {
+  for (let i = A; i <= B; i++) {
+    let divisors = ''
+    let count = 0
+
+    for(let j = 1; j <= i; j++){
+      if (i % j === 0) {
+        divisors += j + ' '
+        count++
+      }
     }
-
-    attempts++
-
-    if(guess === randomNumver){
-      alert(`Congratulations! You Guessed the numver ${randomNumver} correctly in ${attempts} attempts.`)
-      break
-    } else if (guess > randomNumver){
-      alert('Too high! Try again.')
-    } else {
-      alert('Too low! Try again.')
-    }
+    console.log(`Дільники числа ${i} - ${divisors}, к-ть дільників: ${count}.`);
+    
   }
 }
 
-namberGame()
-
-
-
-const sum = (n) => {
-  let sum = 0
-  for (let i = 1; i <= n; i++) {
-    if (i % 2 === 0) sum += i
-  }
-  return sum
-}
-
-sum(50)
+count(10, 20)
