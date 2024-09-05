@@ -174,7 +174,7 @@
 // console.log('✌️cars --->', cars);
 // const test = ['f1', 'Saab', 'Ford', 'Bankli']
 
-// cars.splice(1, 2, 'Renault', 'Seat')
+// cars.splice(1, 1, 'Renault', 'Seat')
 // cars.splice(1, 2, ...test) 
 
 // console.log('✌️cars --->', cars);
@@ -217,15 +217,187 @@
 
 //! Метод масива concat() копіювати масива з додаванням нових елементів в скопійований масив
 
-const cars = ['Bmw', 'Audi', 'MB', 'Skoda', 'Porshe']
-console.log('✌️cars --->', cars);
+// const cars = ['Bmw', 'Audi', 'MB', 'Skoda', 'Porshe']
+// console.log('✌️cars --->', cars);
 
 //! 1 варіант
-// const copyArrayConcat = cars.concat('Ford', 'Saab')
+// const copyArrayConcat = cars.concat('Ford', 'Saab', [1,2,3,4])
 // console.log('✌️copyArrayConcat --->', copyArrayConcat);
 //! 2 варіант
-const arr = ['Renault', 'Saab', 'Ferrari']
-const arr2 = ['Citroen', 'Fiat', 'Subaro']
+// const arr = ['Renault', 'Saab', 'Ferrari']
+// const arr2 = ['Citroen', 'Fiat', 'Subaro']
 
-const copyArrayConcat = cars.concat(arr, arr2)
-console.log('✌️copyArrayConcat --->', copyArrayConcat);
+// const copyArrayConcat = cars.concat(arr, arr2)
+// console.log('✌️copyArrayConcat --->', copyArrayConcat);
+
+////////////////////////////////////////// DZ 6 ////////////////////////
+
+// const arrayNumbers = []
+
+// for (let i = 0; i < 50; i++) {
+//   arrayNumbers.push(Math.floor(Math.random() * 1000))
+// }
+// console.log('✌️arrayNumbers --->', arrayNumbers);
+
+// let minNum = arrayNumbers[0]
+
+// for (let i = 1; i < arrayNumbers.length; i++) {
+//   if(arrayNumbers[i] < minNum) {
+//     minNum = arrayNumbers[i]
+//     console.log(minNum);
+//   }
+// }
+
+// console.log('Мін число масива: ' + minNum);
+
+
+////////////////////////////////////// dz the end /////////////////////////////////
+
+//! МЕТОДИ ПОШУКУ В МАСИВІ 
+
+// const cars = ['Bmw', 'Audi', 'MB', 'Skoda', 'Porshe']
+// console.log('✌️cars --->', cars);
+
+// //?1 indexOf() вертає індекс першого знайденого елемента
+
+// console.log(cars.indexOf('MB'));
+// console.log(cars.indexOf('MB', 3));//-1
+// console.log(cars.indexOf('test')); //-1
+
+// // lastindexOf - шукає останій елемент
+// console.log(cars.lastIndexOf('Skoda'));
+
+// //?2 includes() вертає true or folse
+
+// console.log(cars.includes('Skoda'));//true
+// console.log(cars.includes('test'));//false 
+
+//? 3 find() , findIndex() , filter()
+
+// const cars = [
+//   {name: 'MB', cost: 10000},
+//   {name: 'Bmw', cost: 15000},
+//   {name: 'Audi', cost: 18000},
+//   {name: 'Ford', cost: 28000},
+// ]
+// console.log('✌️cars --->', cars);
+
+// //! find() вертає перший знайдений обєкт
+
+// console.log(cars.find((item)=>{return item.cost === 18000}));//{}
+// console.log(cars.find((item)=>{return item.cost === 20000}));//undefined
+// console.log(cars.find((item, index, array)=>{return item.cost === 10000}));//{}
+
+// //! findIndex() - вертає індекс першого знайденого елемента
+
+// console.log(cars.findIndex((car)=>{return car.cost === 18000}));//2
+// console.log(cars.findIndex((car)=>{return car.cost === 10}));//-1
+
+// //! filter() - вертає всі обєкти які відповідають певній умові
+
+// console.log(cars.find((item)=>{return item.cost > 14000}));// вертає 1 машину
+// console.log(cars.filter((item)=>{return item.cost < 20000}));// вертає 3 машину
+
+
+//! СОРТУВАННЯ МАСИВА
+
+//? sort()
+
+//string
+// const cars = ['Bmw', 'Audi', 'MB', 'Skoda', 'Porshe']
+// console.log('✌️cars --->', cars);
+
+// const letrs = ['d', 'b', 'a', 'c', 'A']
+
+// console.log(cars.sort());
+// console.log(letrs.sort());
+
+// //number
+// const num = [9,8,7,6,5,44,3,2,11]
+
+// console.log(num.sort());
+// console.log(num.sort((a,b)=>{return b - a}));// спадання
+// console.log(num.sort((a,b)=>{return a - b}));// зростання
+// console.log(num.sort((a,b)=>{
+//   // if(a > b)return -1
+//   // if(b > a)return 1
+// }));
+
+//? revers()
+
+// const cars = ['Bmw', 'Audi', 'MB', 'Skoda', 'Porshe']
+// console.log('✌️cars --->', cars);
+
+// console.log(cars.reverse());
+
+
+//! МОДИФІКУВАННЯ МАСИВІВ
+
+// const cars = ['Bmw', 'Audi', 'MB', 'Skoda', 'Porshe']
+// console.log('✌️cars --->', cars);
+
+//? map() - вертає новий модифікований масив
+
+// console.log(cars.map((car)=>{return car.toUpperCase()}));
+// console.log(cars.map(car=>car.toLowerCase()));
+
+//? split() - розділяє строку по певним символав в масив
+
+// const numStr = '1,2,34,54,564,56,76,67,54,43,34,56,67,687'
+// const Str = 'a b c d i'
+
+// console.log(numStr.split(','));
+// console.log(Str.split(' '));
+
+//? join() - робить з масива строку
+
+// const cars = ['Bmw', 'Audi', 'MB', 'Skoda', 'Porshe']
+// console.log('✌️cars --->', cars);
+
+// console.log(cars.join());
+// console.log(cars.join('+-+'));
+// console.log(cars.join('         '));
+
+
+//! перевірка на масив Array.isArray()
+
+// const array = []
+// const object = {}
+
+// console.log(typeof array);
+// console.log(typeof object);
+
+// console.log(Array.isArray(array));
+// console.log(Array.isArray(object));
+
+//! метод циклу forEach() або як перебрати масив :void
+
+// const cars = ['Bmw', 'Audi', 'MB', 'Skoda', 'Porshe']
+// console.log('✌️cars --->', cars);
+
+// //1
+// for (const car of cars) {
+//   console.log(car);
+// }
+
+// //2
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
+
+// //3 forEach()
+
+// cars.forEach((item, index, array)=>{
+//   console.log(`${item.toUpperCase()} => ${index} => ${array}`);
+// })
+
+//! reduce()/ reduceRight()
+
+// const num = [1,2,3,4,5,65,67,87,98,98]//430
+
+// const reduce = num.reduce((previorsValue, item, index, array) => {
+//   return previorsValue + item
+// }, 0)
+
+// console.log('✌️reduce --->', reduce);
+
