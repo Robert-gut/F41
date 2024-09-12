@@ -200,3 +200,202 @@
 // }
 
 // car.showInfo()
+
+
+//! ///////////////////////////// DAY 2 //////////////////////
+
+// ? /////////////////////// DZ //////////////////////
+
+// function isEmptyObj(obj){
+//   for (const key in obj) {
+//     if (obj.hasOwnProperty(key)) {
+//      return false
+//     }
+//   }
+//   return true
+// }
+
+// function isEmptyObj(obj){
+//   return Object.keys(obj).length === 0
+// }
+
+// const anyObj = {name: 'test'}
+// console.log(isEmptyObj(anyObj));
+// ? ///////////////////////the end DZ //////////////////////
+
+
+//? методи  і копіювання обєктів
+
+// const car = {
+//   name: 'MB',
+//   model: 'gla',
+//   maxSpeed: 340
+// }
+
+//* не працює
+// const car2 = car
+// console.log('✌️car --->', car);
+// console.log('✌️car2 --->', car2);
+
+// car2.maxSpeed = 200
+// console.log('✌️car --->', car);
+
+
+//! 1 Object.assign()
+
+// const car2 = Object.assign({}, car)
+
+// console.log('✌️car --->', car);
+// console.log('✌️car2 --->', car2);
+
+// car2.maxSpeed = 200
+// console.log('✌️car --->', car);
+// console.log('✌️car2 --->', car2);
+
+//! 2 ...{}
+
+// const car2 = {...car}
+
+// console.log('✌️car --->', car);
+// console.log('✌️car2 --->', car2);
+
+// car2.maxSpeed = 200
+// console.log('✌️car --->', car);
+// console.log('✌️car2 --->', car2);
+
+//! мінуси ціх 2 варянтів
+// const car = {
+//   name: 'MB',
+//   model: 'gla',
+//   maxSpeed: {
+//     km: 400,
+//     ml:250,
+//   },
+//   engine: [1,2,3]
+// }
+
+//! 1 Object.assign() ---------------
+// const car2 = Object.assign({}, car)
+
+// console.log('✌️car --->', car);
+// console.log('✌️car2 --->', car2);
+
+// car2.model = 'w211'
+// car.maxSpeed.km
+// car2.maxSpeed.km = 200
+// car2.engine.push('444')
+// console.log('✌️car --->', car);
+// console.log('✌️car2 ---up>', car2);
+
+
+
+//! 2 ...{} --------------------
+
+// const car2 = {...car}
+
+// car2.model = 'w211'
+
+// car2.maxSpeed.km = 200
+// car2.engine.push('444')
+
+// console.log('✌️car --->', car);
+// console.log('✌️car2 ---up>', car2);
+
+//! глибоке копіювання 
+
+// const car = {
+//   name: 'MB',
+//   model: 'gla',
+//   maxSpeed: {
+//     km: 400,
+//     ml:250,
+//   },
+//   engine: [1,2,3],
+//   fn: function (){console.log('this is function');},
+//   productionYear: new Date()
+// }
+
+// const newCarJson = JSON.stringify(car)//string
+// console.log('✌️newCarJson --->', newCarJson);
+// console.log('✌️newCarJson --->',typeof newCarJson);
+
+// const newCar = JSON.parse(newCarJson)//{}
+// console.log('✌️newCar --->', newCar);
+
+//* скорочена запис
+// const newCar = JSON.parse(JSON.stringify(car))
+
+// newCar.maxSpeed.km = 500
+// newCar.engine.push('444')
+// console.log('✌️car --->', car);
+// console.log('✌️newCar --->', newCar);
+
+
+// ! обмеження JSON.parse(JSON.stringify(car))
+
+// car.fn()
+
+// newCar.fn()//error
+// newCar.productionYear().getFullYear()
+// console.log(newCar);
+// console.log(car.productionYear.getTime());
+
+
+//! srtucturedColone()
+
+// const car = {
+//   name: 'MB',
+//   model: 'gla',
+//   maxSpeed: {
+//     km: 400,
+//     ml:250,
+//   },
+//   engine: [1,2,3],
+//   // fn: function(){},
+//   productionYear: new Date()
+// }
+
+// const newCar = structuredClone(car)
+// newCar.maxSpeed.km = 1000
+// console.log('✌️newCar --->', newCar);
+// console.log('✌️car --->', car);
+
+// console.log(car.productionYear.getTime());
+// console.log(newCar.productionYear.getTime());
+
+
+//? МЕТОДИ Object()
+
+//! Object.keys() => масив ключів обєкта [key,key,key]
+ 
+// const car = {
+//   name: 'MB',
+//   model: 'gla',
+//   maxSpeed: 250
+// }
+// console.log('✌️car --->', car);
+
+// const objKey = Object.keys(car)
+// console.log('✌️objKey --->', objKey);
+
+//! Object.values() => масив значень обєкта [val,val,val]
+
+// const objValues = Object.values(car)
+// console.log('✌️objValues --->', objValues);
+
+// //! Object.entries() => масив масивів з ключами і значеннями
+
+
+// const objEntries = Object.entries(car)
+// console.log('✌️objEntries --->', objEntries);
+
+// //! Object.defineProperty()
+
+// const objProperty = Object.defineProperty(car, 'clearance',{
+//   value: 35,
+//   enumerable: false
+// })
+// console.log('✌️objProperty --->', objProperty);
+// console.log('✌️objProperty --->', objProperty.clearance);
+
+
